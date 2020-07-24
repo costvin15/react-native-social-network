@@ -1,9 +1,8 @@
 import React, {useState, useEffect} from "react";
-import {Text} from "react-native";
-import {bindActionCreators} from "redux";
+import {FlatList} from "react-native";
 import {connect} from "react-redux";
-import {View} from "react-native";
-import {Appbar} from "react-native-paper";
+import {bindActionCreators} from "redux";
+import {Page, Post} from "../../components";
 
 import {api} from "../../services";
 import {updatePosts} from "../../actions";
@@ -23,11 +22,13 @@ const Home = ({posts, updatePosts}) => {
   }, [posts]);
 
   return (
-    <View>
-      <Appbar.Header>
-        <Appbar.Content title="Home" />
-      </Appbar.Header>
-    </View>
+    <Page pageTitle="Home" hasScroll>
+      {timeline.map((item, index) => (
+        <Post key={index}
+          title={item.title}
+          content={item.content} />
+      ))}
+    </Page>
   );
 };
 
