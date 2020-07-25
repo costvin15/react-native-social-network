@@ -1,0 +1,50 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "No Ifs, Ands, or Buts",
+      "content": "People who insist on picking their teeth with their elbows are so annoying!",
+      "userid": 2,
+      "timeCreated": 1595693909789,
+      "likes": 39
+    },
+    {
+      "id": 2,
+      "title": "Long In The Tooth",
+      "content": "He was 100% into fasting with her until he understood that meant he couldn't eat.",
+      "userid": 1,
+      "timeCreated": 1595621636842,
+      "likes": 543
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "name": "Eric Y Thomas",
+      "username": "quentin_tr1999",
+      "email": "frankie_hamm@yahoo.com",
+      "profilePhoto": "https://www.fakepersongenerator.com/Face/male/male1084177255768.jpg",
+      "socialnetworks": [
+        {
+          "name": "Facebook",
+          "url": "https://www.facebook.com/quentin_tr1999"
+        }
+      ],
+      "lastAccess": 1595694154779       
+    },
+    {
+      "id": 2,
+      "name": "Jack A Williams",
+      "username": "dski23",
+      "email": "jairo.windl@yahoo.com",
+      "profilePhoto": "https://www.fakepersongenerator.com/Face/male/male1085858124085.jpg",
+      "socialnetworks": [
+        {
+          "name": "Facebook",
+          "url": "https://www.facebook.com/dski23"
+        }
+      ],
+      "lastAccess": 1595694095918
+    }
+  ]
+}
