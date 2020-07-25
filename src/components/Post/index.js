@@ -1,10 +1,11 @@
 import React from "react";
-import {Card, Paragraph} from "react-native-paper";
+import {Card, Paragraph, Avatar} from "react-native-paper";
 
-const Post = ({title, content}) => {
+const Post = ({title, content, user, ...props}) => {
   return (
-    <Card>
-      <Card.Title title={title} />
+    <Card {...props}>
+      <Card.Title title={title}
+        left={props => <Avatar.Image {...props} source={{uri: user?.profilePhoto}}  />} />
       <Card.Content>
         <Paragraph>{content}</Paragraph>
       </Card.Content>

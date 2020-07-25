@@ -8,7 +8,7 @@ export const postsReducer = (state = initialValue, action) => {
   switch (action.type) {
     case POSTS_UPDATE:
       return {
-        ...initialValue,
+        ...state,
         posts: action.posts,
       };
     default:
