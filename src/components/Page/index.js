@@ -8,7 +8,6 @@ const Page = ({pageTitle, hasScroll = false, children}) => {
   return (
     <View style={styles.flex}>
       <Toolbar title={pageTitle} />
-      {console.log(styles)}
       {hasScroll && (
         <ScrollView contentContainerStyle={{ ...styles.flexGrow }}>
           {children}
