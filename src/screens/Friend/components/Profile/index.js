@@ -15,8 +15,6 @@ const Profile = ({
   user = null,
   ...props
 }) => {
-  {console.log(user)}
-
   return (
     <View {...props}>
       <Card style={{
