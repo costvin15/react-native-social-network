@@ -45,6 +45,7 @@ const Home = ({posts, users, updatePosts, updateUsers}) => {
           title={item.title}
           content={item.content}
           user={getUser(item.userid)}
+          date={item.timeCreated}
           style={{
             ...styles.marginHorizontalDefault,
             ...styles.marginTopDefault,
