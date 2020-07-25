@@ -21,7 +21,7 @@ const Friend = ({route, navigation, users}) => {
       goBack={navigation.goBack}
       actions={[{
         icon: "forum",
-        onPress: () => {},
+        onPress: () => navigation.push("Chat"),
       }]}
       hasScroll>
       <Profile 
