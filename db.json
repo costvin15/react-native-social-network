@@ -30,7 +30,7 @@
           "url": "https://www.facebook.com/quentin_tr1999"
         }
       ],
-      "lastAccess": 1595694154779       
+      "lastAccess": 1595697284473       
     },
     {
       "id": 2,
@@ -45,6 +45,20 @@
         }
       ],
       "lastAccess": 1595694095918
+    }
+  ],
+  "chat": [
+    {
+      "id": 1,
+      "from": 1,
+      "to": 2,
+      "messages": [
+        {
+          "message": "Hi!",
+          "sender": 1,
+          "timeCreated": 1595697267975
+        }
+      ]
     }
   ]
 }
