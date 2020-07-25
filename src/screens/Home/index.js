@@ -8,7 +8,7 @@ import {api} from "../../services";
 import {Page, Post} from "../../components";
 import {updatePosts, updateUsers} from "../../actions";
 
-const Home = ({posts, users, updatePosts, updateUsers}) => {
+const Home = ({navigation, posts, users, updatePosts, updateUsers}) => {
   const [timeline, setTimeline] = useState(posts);
   const [profiles, setProfiles] = useState(users);
 
@@ -46,6 +46,9 @@ const Home = ({posts, users, updatePosts, updateUsers}) => {
           content={item.content}
           user={getUser(item.userid)}
           date={item.timeCreated}
+          onProfilePhotoTap={() => {
+            navigation.navigate("Friend", {userId: item.userid});
+          }}
           style={{
             ...styles.marginHorizontalDefault,
             ...styles.marginTopDefault,
