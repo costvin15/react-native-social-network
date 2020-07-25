@@ -13,7 +13,11 @@ export const getUserMessages = async (from, to) => {
   }
   
   let response = messages.find((value) => value.to === to);
-  response = response.messages;
+  response = response?.messages;
+
+  if (typeof response === "undefined") {
+    return [];
+  }
   
   response = response.map(value => ({
     _id: value.timeCreated,
