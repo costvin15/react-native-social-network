@@ -4,10 +4,21 @@ import Toolbar from "../Toolbar";
 
 import styles from "./styles";
 
-const Page = ({pageTitle, hasScroll = false, children}) => {
+const Page = ({
+  pageTitle = "",
+  hasScroll = false,
+  children = <></>,
+  canGoBack = false,
+  goBack = () => {},
+  actions = [],
+}) => {
   return (
     <View style={styles.flex}>
-      <Toolbar title={pageTitle} />
+      <Toolbar
+        title={pageTitle}
+        canGoBack={canGoBack}
+        goBack={goBack}
+        actions={actions} />
       {hasScroll && (
         <ScrollView contentContainerStyle={{ ...styles.flexGrow }}>
           {children}
