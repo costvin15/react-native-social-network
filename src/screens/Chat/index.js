@@ -6,7 +6,6 @@ import Provider from "./provider";
 
 const Chat = ({route, navigation}) => {
   const {userId} = route.params;
-
   const [messages, setMessages] = useState([]);
   
   useEffect(() => {
@@ -16,7 +15,7 @@ const Chat = ({route, navigation}) => {
       const received = await Provider.getUserMessages(userId, loggedUserId);
       const sent = await Provider.getUserMessages(loggedUserId, userId);
       const result = [...received, ...sent];
-      result.sort((a, b) => a._id - b._id);
+      result.sort((a, b) => b._id - a._id);
       setMessages(result);
     })();
   }, []);
