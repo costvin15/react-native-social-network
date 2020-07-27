@@ -3,13 +3,22 @@ import {connect} from "react-redux";
 import {Page, Profile as ProfileComponent} from "../../../../components";
 import {styles} from "./styles";
 
-const Profile = ({currentUser}) => {
+const Profile = ({currentUser, navigation}) => {
   useEffect(() => {
     console.log(currentUser);
   }, []);
 
   return (
-    <Page pageTitle={currentUser.name} hasScroll>
+    <Page pageTitle={currentUser.name}
+      actions={[
+        {
+          icon: "pencil",
+          onPress: () => {
+            navigation.push("EditProfile");
+          },
+        }
+      ]}
+      hasScroll>
       <ProfileComponent user={currentUser}
         style={{
           ...styles.marginHorizontalDefaut,
