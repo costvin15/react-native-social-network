@@ -15,8 +15,6 @@ const Profile = ({
   user = null,
   ...props
 }) => {
-  {console.log(user)}
-
   return (
     <View {...props}>
       <Card style={{
@@ -51,8 +49,8 @@ const Profile = ({
       }}>
         <Title>Social networks</Title>
         {user?.socialnetworks.map((value, index) => (
-          <TouchableOpacity onPress={() => Linking.openURL(value.url)}>
-            <View key={index} style={{...styles.flexDirectionRow, ...styles.alignItemsCenter}}>
+          <TouchableOpacity key={index} onPress={() => Linking.openURL(value.url)}>
+            <View style={{...styles.flexDirectionRow, ...styles.alignItemsCenter}}>
               <IconButton icon={value.name.toLowerCase()} />
               <Title>{value.name}</Title>
             </View>

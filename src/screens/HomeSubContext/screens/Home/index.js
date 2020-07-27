@@ -1,12 +1,11 @@
 import React, {useState, useEffect} from "react";
-import {FlatList} from "react-native";
 import {connect} from "react-redux";
 import {bindActionCreators} from "redux";
 
 import {styles} from "./styles";
-import {api} from "../../services";
-import {Page, Post} from "../../components";
-import {updatePosts, updateUsers} from "../../actions";
+import {api} from "../../../../services";
+import {Page, Post} from "../../../../components";
+import {updatePosts, updateUsers} from "../../../../actions";
 
 const Home = ({navigation, posts, users, updatePosts, updateUsers}) => {
   const [timeline, setTimeline] = useState(posts);

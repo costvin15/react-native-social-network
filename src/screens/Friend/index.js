@@ -2,7 +2,7 @@ import React, {useState, useEffect} from "react";
 import {connect} from "react-redux";
 
 import {Page} from "../../components";
-import {Profile} from "./components";
+import {Profile} from "../../components";
 import {styles} from "./styles";
 
 const Friend = ({route, navigation, users}) => {
@@ -21,7 +21,9 @@ const Friend = ({route, navigation, users}) => {
       goBack={navigation.goBack}
       actions={[{
         icon: "forum",
-        onPress: () => {},
+        onPress: () => navigation.push("Chat", {
+          userId,
+        }),
       }]}
       hasScroll>
       <Profile 
