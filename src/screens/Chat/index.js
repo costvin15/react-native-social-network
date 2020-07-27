@@ -6,7 +6,6 @@ import Provider from "./provider";
 
 const Chat = ({route, navigation}) => {
   const {userId} = route.params;
-
   const [messages, setMessages] = useState([]);
   
   useEffect(() => {
@@ -15,7 +14,9 @@ const Chat = ({route, navigation}) => {
       const loggedUserId = 1;
       const received = await Provider.getUserMessages(userId, loggedUserId);
       const sent = await Provider.getUserMessages(loggedUserId, userId);
-      setMessages([...received, ...sent]);
+      const result = [...received, ...sent];
+      result.sort((a, b) => b._id - a._id);
+      setMessages(result);
     })();
   }, []);
   
@@ -24,7 +25,7 @@ const Chat = ({route, navigation}) => {
       pageTitle="Chat"
       canGoBack={navigation.canGoBack()}
       goBack={navigation.goBack}>
-      <GiftedChat messages={messages} />
+      <GiftedChat messages={messages} user={{_id: 1}} />
     </Page>
   );
 };
