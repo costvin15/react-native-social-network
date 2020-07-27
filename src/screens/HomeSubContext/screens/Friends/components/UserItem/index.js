@@ -19,6 +19,7 @@ const UserItem = ({user, ...props}) => {
         }}>
           <Title>{user.name}</Title>
           <Caption>{moment(user.lastAccess).calendar()}</Caption>
+          <Caption>Status: {user.status}</Caption>
         </View>
       </View>
     </Card>
