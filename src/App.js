@@ -1,7 +1,7 @@
 import React from "react";
 import {createStackNavigator} from "@react-navigation/stack";
 
-import {HomeSubContext, Friend, Chat} from "./screens";
+import {HomeSubContext, Friend, Chat, EditProfile} from "./screens";
 
 const Stack = createStackNavigator();
 
@@ -11,6 +11,7 @@ const App = () => {
       <Stack.Screen name="HomeSubContext" component={HomeSubContext} />
       <Stack.Screen name="Friend" component={Friend} />
       <Stack.Screen name="Chat" component={Chat} />
+      <Stack.Screen name="EditProfile" component={EditProfile} />
     </Stack.Navigator>
   );
 };
