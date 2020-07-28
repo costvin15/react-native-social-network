@@ -14,7 +14,9 @@ const Profile = ({currentUser, navigation}) => {
         {
           icon: "pencil",
           onPress: () => {
-            navigation.push("EditProfile");
+            navigation.push("EditProfile", {
+              user: currentUser,
+            });
           },
         }
       ]}
