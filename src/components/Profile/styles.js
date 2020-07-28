@@ -4,6 +4,9 @@ export const styles = StyleSheet.create({
   noMargin: {
     margin: 0,
   },
+  marginTopDefault: {
+    marginTop: 15,
+  },
   marginBottomDefault: {
     marginBottom: 15,
   },
