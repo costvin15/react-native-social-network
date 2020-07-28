@@ -1,5 +1,5 @@
 import React from "react";
-import {View, TouchableOpacity, Linking} from "react-native";
+import {View, TouchableOpacity, Linking, Image} from "react-native";
 import {
   Card,
   Avatar,
@@ -50,6 +50,7 @@ const Profile = ({
       <Card style={{
         ...styles.paddingHorizontalDefault,
         ...styles.paddingVerticalDefault,
+        ...styles.marginBottomDefault,
       }}>
         <Title>Social networks</Title>
         {user?.socialnetworks.map((value, index) => (
@@ -60,6 +61,18 @@ const Profile = ({
             </View>
           </TouchableOpacity>
         ))}
+      </Card>
+
+      <Card style={{
+        ...styles.paddingHorizontalDefault,
+        ...styles.paddingVerticalDefault,
+      }}>
+        <Title>Photos</Title>
+        <View style={{...styles.marginTopDefault}}>
+          {user?.photos.map((value, index) => (
+            <Image key={index} source={{uri: value}} style={{height: 200}} />
+          ))}
+        </View>
       </Card>
     </View>
   );
