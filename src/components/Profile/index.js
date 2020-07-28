@@ -30,6 +30,10 @@ const Profile = ({
           <View style={{...styles.paddingHorizontalDefault}}>
             <Title>{user?.name}</Title>
             <View style={{...styles.flexDirectionRow, ...styles.alignItemsCenter}}>
+              <IconButton icon="comment-quote" size={15} style={{...styles.noMargin}} />
+              <Caption>{user?.status}</Caption>
+            </View>
+            <View style={{...styles.flexDirectionRow, ...styles.alignItemsCenter}}>
               <IconButton icon="email" size={15} style={{...styles.noMargin}} />
               <Caption>{user?.email}</Caption>
             </View>
