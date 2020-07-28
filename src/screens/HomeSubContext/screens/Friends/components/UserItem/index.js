@@ -1,28 +1,34 @@
 import React from "react";
-import {View} from "react-native";
+import {View, TouchableOpacity} from "react-native";
 import {Card, Avatar, Title, Caption} from "react-native-paper";
 import moment from "moment";
 
 import {styles} from "./styles";
 
-const UserItem = ({user, ...props}) => {
+const UserItem = ({
+  user = {},
+  onPress = () => {},
+  ...props
+}) => {
   return (
-    <Card {...props} style={{
-      ...styles.paddingHorizontalDefault,
-      ...styles.paddingVerticalDefault,
-    }}>
-      <View style={{...styles.flexDirectionRow}}>
-        <Avatar.Image source={{uri: user.profilePhoto}} />
-        <View style={{
-          ...styles.paddingHorizontalDefault,
-          ...styles.justifyContentCenter,
-        }}>
-          <Title>{user.name}</Title>
-          <Caption>{moment(user.lastAccess).calendar()}</Caption>
-          <Caption>Status: {user.status}</Caption>
+    <TouchableOpacity onPress={onPress}>
+      <Card {...props} style={{
+        ...styles.paddingHorizontalDefault,
+        ...styles.paddingVerticalDefault,
+      }}>
+        <View style={{...styles.flexDirectionRow}}>
+          <Avatar.Image source={{uri: user.profilePhoto}} />
+          <View style={{
+            ...styles.paddingHorizontalDefault,
+            ...styles.justifyContentCenter,
+          }}>
+            <Title>{user.name}</Title>
+            <Caption>{moment(user?.lastAccess).calendar()}</Caption>
+            <Caption>Status: {user?.status}</Caption>
+          </View>
         </View>
-      </View>
-    </Card>
+      </Card>
+    </TouchableOpacity>
   );
 };
 

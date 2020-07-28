@@ -6,7 +6,7 @@ import {styles} from "./styles";
 import {UserItem} from "./components";
 import {Page} from "../../../../components";
 
-const Friends = ({users}) => {
+const Friends = ({users, navigation}) => {
   return (
     <Page pageTitle="Friends"
       hasScroll>
@@ -19,7 +19,9 @@ const Friends = ({users}) => {
             ...styles.marginBottomDefault
           })
         }}>
-          <UserItem user={value} />
+          <UserItem user={value} onPress={() => navigation.navigate("Friend", {
+            userId: value.id,
+          })} />
         </View>
       ))}
     </Page>
