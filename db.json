@@ -42,7 +42,12 @@
           ]
         }
       ],
-      "status": "Hey there! 😁"
+      "status": "Hey there! 😁",
+      "photos": [
+        "https://images.unsplash.com/photo-1542059105-72e61aef4b78?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=375&q=80",
+        "https://images.unsplash.com/photo-1542029722221-1c7dc4b06781?ixlib=rb-1.2.1&auto=format&fit=crop&w=668&q=80",
+        "https://images.unsplash.com/photo-1541991078342-884c7bcb1ad6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=262&q=80"
+      ]
     },
     {
       "id": 2,
@@ -72,7 +77,12 @@
           ]
         }
       ],
-      "status": "On the Ropes! 🚀"
+      "status": "On the Ropes! 🚀",
+      "photos": [
+        "https://images.unsplash.com/photo-1542059105-72e61aef4b78?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=375&q=80",
+        "https://images.unsplash.com/photo-1542029722221-1c7dc4b06781?ixlib=rb-1.2.1&auto=format&fit=crop&w=668&q=80",
+        "https://images.unsplash.com/photo-1541991078342-884c7bcb1ad6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=262&q=80"
+      ]
     }
   ]
 }
