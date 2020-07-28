@@ -12,7 +12,7 @@ const SubContext = () => {
   return (
     <Tab.Navigator initialRouteName="Home"
       barStyle={{
-        backgroundColor: Theme.colors.primary,
+        backgroundColor: Theme.colors.surface,
       }}>
       <Tab.Screen name="Home"
         component={Home}
