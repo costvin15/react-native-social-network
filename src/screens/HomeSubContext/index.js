@@ -3,7 +3,7 @@ import {createMaterialBottomTabNavigator} from "@react-navigation/material-botto
 import MaterialIcons from "react-native-vector-icons/MaterialIcons";
 import {useTheme} from "react-native-paper";
 
-import {Home} from "./screens";
+import {Home, Friends, Profile} from "./screens";
 
 const SubContext = () => {
   const Tab = createMaterialBottomTabNavigator();
@@ -19,7 +19,22 @@ const SubContext = () => {
         options={{
           tabBarIcon: ({color}) => 
             <MaterialIcons name="home" color={color} size={26} />
-        }} />
+        }}
+      />
+      <Tab.Screen name="Friends"
+        component={Friends}
+        options={{
+          tabBarIcon: ({color}) =>
+            <MaterialIcons name="group" color={color} size={26} />
+        }}
+      />
+      <Tab.Screen name="Profile"
+        component={Profile}
+        options={{
+          tabBarIcon: ({color}) =>
+            <MaterialIcons name="person" color={color} size={26} />
+        }}
+        />
     </Tab.Navigator>
   );
 };
