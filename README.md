@@ -1,3 +1,18 @@
-## About
+# react-native-social-network
 
-This app consists of a fictional social network. You can view posts, your friends and your profile. This project was developed in React Native with the help of the libraries react-redux, react-native-paper, react-native-navigation and moment.js. All data in this application is fake and read-only. You can get then at the [My Json Server](https://my-json-server.typicode.com) service.
+## Sobre
+
+Esta aplicação consiste em uma rede social fictícia, todos os dados apresentados aqui são fakes e estáticos (read-only). Este projeto foi desenvolvido em React Native, com auxílio de bibliotecas como react-redux, react-navigation, react-native-paper e entre outros. A aplicação contém uma listagem de pequenos posts, usuários, chat entre esses usuários além de recursos gráficos como skeleton placeholder e dark mode.
+
+![Página inicial](screenshots/home_light.png)
+![Página inicial](screenshots/home_dark.png)
+
+![Amigos](screenshots/friends_light.png)
+![Amigos](screenshots/friends_dark.png)
+
+![Perfil](screenshots/profile_light.png)
+![Perfil](screenshots/profile_dark.png)
+
+## Abordagens
+
+Para essa aplicação foi-se adotado as boas práticas no desenvolvimento de aplicações ES6. O fluxo de dados é simples, a aplicação faz uma consulta na api em seu primeiro acesso e armazena no Store dados como: posts, perfis e conversas, para que assim não seja necessário uma segunda consulta ao acessar páginas como Amigos.
